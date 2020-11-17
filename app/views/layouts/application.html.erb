@@ -18,9 +18,9 @@
             <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
-          <% if signed_in?%>
+          <% if user_signed_in? %>
             <div class="nav__right">
-               <%= link_to "ログアウト", destroy_user_session_path, :method=> :get, remort: true %>
+               <%= link_to "ログアウト", destroy_user_session_path, class: :nav__logout %>
                <%= link_to "New Proto", new_prototype_path, class: :nav__btn %>
             </div>
           <%# // ログインしているときは上記を表示するようにしましょう %>
